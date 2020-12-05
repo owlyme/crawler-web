@@ -1,13 +1,12 @@
-const  getHtml = require('./utils/gethtml')
+const  getHtml = require('./utils/gethtml');
 
-
-getHtml('http://www.baidu.com')
-
-// s = `
-// <script type="text/javascript" href="perman/js/lib/jquery-1-edb203c114.10.2.js"></script>
-// <script type="text/javascript" src="https://dss0.bdstatiery-1-edb203c114.10.2.js"></script>`
-
-// console.log(
-//   'http://ss.bdimg.com/static/superman/js/?ytut'.replace(/(.*[^\/])(\/)?\?(.*)/, '$1')
-// )
-
+['http://www.lakeshore-capital.cn/',
+  'http://www.lakeshore-capital.cn/about/list/?MID=81',
+  'http://www.lakeshore-capital.cn/invest/style/',
+  'http://www.lakeshore-capital.cn/business/huan/',
+  'http://www.lakeshore-capital.cn/news/',
+  'http://www.lakeshore-capital.cn/contact/'
+].forEach(url => {
+    getHtml(url)
+    // console.log(url)
+  });
