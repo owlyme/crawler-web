@@ -1,0 +1,17 @@
+{
+  "name": "crawler-web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "",
+  "author": "owlyme <1148452777@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "crawler": "^1.3.0"
+  },
+  "devDependencies": {
+    "fs-extra": "^9.0.1"
+  }
+}
