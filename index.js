@@ -1,12 +1,7 @@
-const  getHtml = require('./utils/gethtml');
+const getHtml = require('./utils/pup');
 
-['http://www.lakeshore-capital.cn/',
-  'http://www.lakeshore-capital.cn/about/list/?MID=81',
-  'http://www.lakeshore-capital.cn/invest/style/',
-  'http://www.lakeshore-capital.cn/business/huan/',
-  'http://www.lakeshore-capital.cn/news/',
-  'http://www.lakeshore-capital.cn/contact/'
+[
+  "https://www.hyc.cn/index/main/#a3"
 ].forEach(url => {
-    getHtml(url)
-    // console.log(url)
-  });
+  getHtml(url)
+});

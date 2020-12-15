@@ -13,21 +13,19 @@ async function getHtml(uri, baseFilePath = '../crawlerPage/') {
     };
   }
 
-  // console.log(url.parse(uri))
-
-  const {code, crawler} = await crawlerSource({
+  const { code, crawler } = await crawlerSource({
     uri,
     fileName: formatFilePath(baseFilePath + getNoQueryUrl(uri).replace(/\/$/, '') + '.html')
   });
 
-  if (code == 1){
-    const {$} = crawler
+  if (code == 1) {
+    const { $ } = crawler
     let html = $.html()
     let sources = html.match(/src=".+?"|href=".+?"/g).map(i => i.replace(/.*"(.+?)"/g, '$1'))
     sources.forEach(async link => {
-      const {host, pathname} = url.parse(link)
-      if(!pathname || /[^a-zA-Z\d\.\/:]/.test(pathname)) return
-      const {name, ext} = path.parse(link)
+      const { host, pathname } = url.parse(link)
+      if (!pathname || /[^a-zA-Z\d\.\/:]/.test(pathname)) return
+      const { name, ext } = path.parse(link)
       if (ext) {
 
         if (/http:|https:/.test(link)) {
@@ -49,7 +47,7 @@ async function getHtml(uri, baseFilePath = '../crawlerPage/') {
           // host: 'www.lakeshore-capital.cn',
           // port: null,
           // hostname: 'www.lakeshore-capital.cn',
-          let {protocol, hostname} = url.parse(uri)
+          let { protocol, hostname } = url.parse(uri)
 
           await crawlerSource({
             uri: `${protocol}//${hostname}` + path.join('/', link),
