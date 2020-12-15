@@ -5,7 +5,7 @@ const DEBUG = false;
 const executablePath = "C:/Program Files/Google/Chrome/Application/chrome.exe";
 const gameName = '';
 const blackList = [];
-
+// https://zhuanlan.zhihu.com/p/147338622
 const getHtml = async(url, baseFilePath = './crawlerPage') => {
   const browser = await puppeteer.launch({
     executablePath, //本机chrome路径
