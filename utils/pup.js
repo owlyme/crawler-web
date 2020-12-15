@@ -1,6 +1,8 @@
 const puppeteer = require('puppeteer-core');
 const fs = require('fs');
 const mkdirp = require('mkdirp');
+const crawlerSource = require('./index');
+
 const DEBUG = false;
 const executablePath = "C:/Program Files/Google/Chrome/Application/chrome.exe";
 const gameName = '';
@@ -33,7 +35,7 @@ const getHtml = async(url, baseFilePath = './crawlerPage') => {
     const status = response.status()
 
     //状态码判断
-    if (status !== 200) {
+    if (status < 200 || status >= 300) {
       console.log('Get Warning:', status, url);
       return;
     }
@@ -43,10 +45,11 @@ const getHtml = async(url, baseFilePath = './crawlerPage') => {
     }
     const filename = url.split("://")[1].split("?")[0];
     const dir = filename.substr(0, filename.lastIndexOf('/'));
-    response.text().then((body) => {
-      mkdirp(gameDir + '/' + dir).then(res =>
-        fs.writeFile(gameDir + '/' + filename, body, function(e) {})
-      )
+
+    response.buffer().then((body) => {
+      mkdirp(gameDir + '/' + dir).then(res => {
+        fs.writeFile(gameDir + '/' + filename, body, function(e) {});
+      })
     })
   });
 
