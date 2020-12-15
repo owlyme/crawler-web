@@ -41,12 +41,6 @@ async function getHtml(uri, baseFilePath = '../crawlerPage/') {
           })
         } else if (/^\//.test(link)) {
 
-          // protocol: 'http:',
-          // slashes: true,
-          // auth: null,
-          // host: 'www.lakeshore-capital.cn',
-          // port: null,
-          // hostname: 'www.lakeshore-capital.cn',
           let { protocol, hostname } = url.parse(uri)
 
           await crawlerSource({
