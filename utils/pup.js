@@ -1,14 +1,12 @@
 const puppeteer = require('puppeteer-core');
 const fs = require('fs');
 const mkdirp = require('mkdirp');
-const crawlerSource = require('./index');
-
 const DEBUG = false;
-const executablePath = "C:/Program Files/Google/Chrome/Application/chrome.exe";
 const gameName = '';
 const blackList = [];
-// https://zhuanlan.zhihu.com/p/147338622
-const getHtml = async(url, baseFilePath = './crawlerPage') => {
+// 案例参考地址 https://zhuanlan.zhihu.com/p/147338622
+const getWebSource = async(url, baseFilePath = './crawlerPage', executablePath) => {
+
   const browser = await puppeteer.launch({
     executablePath, //本机chrome路径
     devtools: true, //调试打开浏览器
@@ -58,4 +56,23 @@ const getHtml = async(url, baseFilePath = './crawlerPage') => {
   await browser.close();
 }
 
-module.exports = getHtml;
+
+const getWebSiteSource = (executablePath, outputPath = './crawlerPage') => {
+  if (!executablePath) {
+    console.error("你可能没有经安装 chrome 浏览器, 或者没有配置正确的执行路径");
+    return;
+  }
+
+  return pathes => {
+    if (!Array.isArray(pathes)) {
+      console.error("请以数组的格式传入路径参数");
+      return;
+    }
+    pathes.forEach(url => {
+      getWebSource(url, outputPath, executablePath)
+    });
+  }
+
+};
+
+module.exports = getWebSiteSource
