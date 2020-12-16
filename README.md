@@ -1,3 +1,12 @@
-# npm install / yarn
+# 安装
+```
+npm install / yarn
+```
 
-# npm run start / yarn start
+## 执行 
+```
+npm run start / yarn start
+```
+
+## 使用
+见index.js 文件
