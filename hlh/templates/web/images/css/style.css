@@ -182,67 +182,12 @@ video {
   margin-top: 10px;
 }
 
-.header-box {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  background-color: #fff;
-  z-index: 99;
-  transition: all 0.3s ease;
-}
-.header-box.fixed {
-  padding-top: 10px;
-}
-.header-box .header-wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header-box .header-wrap .logo-box {
-  flex: 0 0 auto;
-}
-.header-box .header-wrap .menu-box {
-  width: 60%;
-  margin-top: 20px;
-}
-.header-box .header-wrap .menu-box .menu-list {
-  display: flex;
-  justify-content: space-between;
-}
-.header-box .header-wrap .menu-box .menu-list .menu-item {
-  width: 20%;
-  text-align: center;
-}
-.header-box .header-wrap .menu-box .menu-list .menu-item .menu-link {
-  font-size: 17px;
-  color: #000;
-  line-height: 30px;
-  border-bottom: 4px solid transparent;
-  padding: 0 4px 7px;
-  display: inline-block;
-}
-.header-box .header-wrap .menu-box .menu-list .menu-item .menu-link:hover {
-  font-size: 20px;
-  color: #00502f;
-  border-color: #00502f;
-}
-.header-box .header-wrap .phone-box {
-  margin-top: 5px;
-}
-.header-box .header-wrap .phone-box span {
-  display: block;
-  font-size: 22px;
-  color: #000;
-  line-height: 30px;
-  background: url(../icon-phone.png) no-repeat left center;
-  padding-left: 30px;
-}
-
 .banner-box {
-  margin-top: 90px;
+  margin-top: 60px;
 position: relative;;
+}
+.banner-box img{
+  width: 100%;
 }
 
 .banner-box .hope {
@@ -505,11 +450,13 @@ position: relative;;
 }
 .service-box .service-swiper {
   position: relative;
+  margin: 30px 0px;
 }
 .service-box .service-swiper .swiper-container {
   margin: 0 50px;
 }
 .service-box .service-swiper .swiper-container .swiper-wrapper {
+  height: auto;
 }
 .service-box .service-swiper .swiper-container .swiper-slide {
   text-align: center;
@@ -537,14 +484,14 @@ position: relative;;
   background-position: center center;
 }
 .service-box .service-swiper .swiper-button-prev {
-  background-image: url(../arrow_left.png);
+  /* background-image: url(../arrow_left.png); */
   left: 0;
 }
 .service-box .service-swiper .swiper-button-prev::after {
   content: unset;
 }
 .service-box .service-swiper .swiper-button-next {
-  background-image: url(../arrow_right.png);
+  /* background-image: url(../arrow_right.png); */
   right: 0;
 }
 .service-box .service-swiper .swiper-button-next::after {
@@ -691,7 +638,8 @@ position: relative;;
 
 .footer-box {
   height: 541px;
-  background: url(../footer-bg.png) no-repeat left top;
+  /* background: url(../footer-bg.png) no-repeat left top; */
+  background-color: rgba(0, 0, 0, 0.9);
   padding-top: 150px;
 }
 .footer-box .footer-wrap {
@@ -752,4 +700,18 @@ position: relative;;
   color: #fff;
   text-align: center;
   margin-top: 10px;
+}
+
+
+.about-swiper {
+  background: linear-gradient(to right, rgba(96, 37, 245, 0.4), rgba(255, 85, 85, 0.4));
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.about-job{
+  text-align: center;
+  font-size: 34px;
+  margin: 40px 0 20px
 }

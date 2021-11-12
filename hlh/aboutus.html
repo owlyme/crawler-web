@@ -7,50 +7,68 @@
     <meta name="keywords" content="艺萱,品牌营销内容种草" />
     <meta name="description" content="艺萱, 品牌营销内容种草" />
     <link rel="stylesheet" href="templates/web/images/css/swiper.min.css" />
+    <link rel="stylesheet" href="templates/web/images/css/nav.css" />
     <link rel="stylesheet" href="templates/web/images/css/style.css" />
+    
     <script src="templates/web/images/js/jquery-3.4.1.min.js"></script>
+   
+    {# <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script> #}
     <script src="templates/web/images/js/swiper.min.js"></script>
     <script src="templates/web/images/js/count.js"></script>
-     <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.8/vue.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.8/vue.min.js"></script>
     <script src="templates/web/images/js/about.js"></script>
-   
+    <script src="templates/web/images/js/timeline.min.js"></script>
+    <link rel="stylesheet" href="templates/web/images/js/timeline.css" />
+    <script src="templates/web/images/js/nav.js"></script>
   </head>
   <body>
-    <div class="header-box fixed">
-      <div class="container">
-        <div class="header-wrap">
-          <div class="logo-box">
-            <img src="templates/web/images/logo.png" />
-          </div>
-          <div class="menu-box">
-            <ul class="menu-list">
-              <li class="menu-item"><a href="./" class="menu-link">首页</a></li>
-              <li class="menu-item">
-                <a href="#ourStrengths" class="menu-link">专业团队</a>
-              </li>
-              <li class="menu-item">
-                <a href="#ourService" class="menu-link">我们的服务</a>
-              </li>
-              <li class="menu-item">
-                <a href="#cooperativePartner" class="menu-link">合作伙伴</a>
-              </li>
-              <li class="menu-item">
-                <a href="#contactUs" class="menu-link">联系我们</a>
-              </li>
-              <li class="menu-item">
-                <a href="/aboutus.html" class="menu-link">关于我们</a>
-              </li>
-            </ul>
-          </div>
-        
+
+ <header class="cd-morph-dropdown">
+      <a href="#0" class="nav-trigger"
+        >Open Nav<span aria-hidden="true"></span
+      ></a>
+
+      <nav class="main-nav">
+        <ul>
+          <li class=" gallery links" data-content="about">
+            <a href="./" class="menu-link">首页</a>
+          </li>
+          
+          <li class=" links" data-content="pricing">
+            <a href="./#ourStrengths" class="menu-link">我们的优势</a>
+          </li>
+          <li class=" links" data-content="pricing">
+            <a href="./#cooperativePartner" class="menu-link">合作伙伴</a>
+          </li>
+          <li class="links" data-content="pricing">
+            <a href="" class="menu-link">关于我们</a>
+          </li>
+
+          <li class="has-dropdown button" data-content="contact">
+            <a href="#contactUs"  class="menu-link">联系我们</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="morph-dropdown-wrapper">
+        <div class="dropdown-list">
+          <ul>
+            <li id="about" class="dropdown gallery">
+              <a href="#0" class="label">About</a>		
+            </li>
+
+            <li id="pricing" class="dropdown links">
+              <a href="#0" class="label">Pricing</a>
+            </li>
+
+            
+          </ul>
         </div>
       </div>
-    </div>
-   
+    </header>
 
     <div class="service-box" id="ourService">
-      
-      <div class="team">
+      <div class="team about-swiper">
         <div class="container">
           <div class="service-swiper">
             <div
@@ -81,11 +99,15 @@
                   "
                 >
                   <img
-                    src="upfiles/202109/06/afcb1846ca1fcb132.png"
-                    alt="MAKE UP FOR EVER玫珂菲官方旗舰店"
+                    src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201704%2F25%2F20170425125512_CBRTa.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1637076805&t=087416cd563b4f4dd85b31d79c2268b7"
+                
                   />
-                   <p class="title">思凡</p>
-                  <p class="title">资深内容策略总监 新生代潮流内容的代表，熟知B站/小红书等平台的内容玩法，对平台爆文有着资深研究 为多个头部品牌生产出10万+爆文</p>
+                  <p class="title">思凡</p>
+                  <p class="title">
+                    资深内容策略总监
+                    新生代潮流内容的代表，熟知B站/小红书等平台的内容玩法，对平台爆文有着资深研究
+                    为多个头部品牌生产出10万+爆文
+                  </p>
                 </div>
                 <div
                   class="swiper-slide swiper-slide-active"
@@ -99,11 +121,12 @@
                   "
                 >
                   <img
-                    src="upfiles/202109/06/a1ba87005503550d0.png"
-                    alt="修丽可官方旗舰店"
-                  />
+                    src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F012e8f5abe36e5a8012062e3edd2f8.jpg%402o.jpg&refer=http%3A%2F%2Fimg.zcool.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1637076805&t=c4213f7eddb7284cf80e7b76166715f0" 
+                    />
                   <p class="title">艺萱</p>
-                  <p class="title">创始人,中文系专业的广告人，艺萱传媒的灵魂人物，超8年的资深内容营销人</p>
+                  <p class="title">
+                    创始人,中文系专业的广告人，艺萱传媒的灵魂人物，超8年的资深内容营销人
+                  </p>
                 </div>
                 <div
                   class="swiper-slide swiper-slide-next"
@@ -117,11 +140,12 @@
                   "
                 >
                   <img
-                    src="upfiles/202109/06/a28ea2f2a7fb5ef02.jpg"
-                    alt="完美日记京东自营官方旗舰店"
-                  /> 
+                    src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201506%2F03%2F20150603110753_XwTA5.thumb.400_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1637076805&t=df644df11a2004a3989b28b0a3c24910"
+                  />
                   <p class="title">铭川</p>
-                  <p class="title">创始合伙人，资深电商操盘手，帮助品牌实现销售额0-5000万的突破</p>
+                  <p class="title">
+                    创始合伙人，资深电商操盘手，帮助品牌实现销售额0-5000万的突破
+                  </p>
                 </div>
 
                 <div
@@ -136,14 +160,14 @@
                   "
                 >
                   <img
-                    src="upfiles/202109/06/a28ea2f2a7fb5ef02.jpg"
-                    alt="完美日记京东自营官方旗舰店"
-                  /> 
+                    src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fup.enterdesk.com%2Fedpic_360_360%2F39%2F2d%2Fa3%2F392da343b14d5d36c3db53b259cdad8b.jpg&refer=http%3A%2F%2Fup.enterdesk.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1637076805&t=d621e450886fd873ec10a96fd2c60256"
+                  />
                   <p class="title">黄黄</p>
-                  <p class="title">资深内容创意总监，中文系专业，曾服务多家知名品牌的品牌总监，熟知品牌内容投放策略 特别是品牌从0到1的内容打法 吐槽大会落选的灵魂段子手</p>
+                  <p class="title">
+                    资深内容创意总监，中文系专业，曾服务多家知名品牌的品牌总监，熟知品牌内容投放策略
+                    特别是品牌从0到1的内容打法 吐槽大会落选的灵魂段子手
+                  </p>
                 </div>
-
-             
               </div>
               <span
                 class="swiper-notification"
@@ -164,12 +188,103 @@
               aria-label="Next slide"
             ></div>
           </div>
-  
+        </div>
+      </div>
+
+      <div class="jq22-container container">
+        <h1 class="about-job">一路走来</h2>
+        <div class="cntl">
+          <span class="cntl-bar cntl-center">
+            <span class="cntl-bar-fill" style="height: 2083.73px"></span>
+          </span>
+
+          <div class="cntl-states" id="cntl">
+            <div class="cntl-state cntl-animate">
+              <div class="cntl-content">
+                <h4>9月</h4>
+                <p>成功与千亿美金市值“小米集团”达成内容种草战略合作</p>
+                <p>成功与全球最大玻尿酸生产基地“福瑞达集团”达成内容种草战略合作。</p>
+
+                <h4>8月</h4>
+                <p>艺萱传媒&飞象新零售联合运营的品牌加速器园区正式挂牌</p>
+
+                <h4>5月</h4>
+                <p>成功与连续3年全网懒人沙发销量第一品牌“LUCKYSAC”达成内容种草战略合作</p>
+                <p>成功与天猫乳制品类目第一“认养一头牛”达成内容种草战略合作</p>
+
+                <h4>3月</h4>
+                <p>成功与明星谢霆锋品牌“锋味派”达成内容种草战略合作。</p>
+
+                <h4>1月</h4>
+                <p>成功与“谭木匠”上市公司达成内容种草战略合作。</p>
+                <p>成功与“千与千寻”达成内容种草战略合作。</p>
+              </div>
+              
+              
+              <div class="cntl-image"><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fup.enterdesk.com%2Fedpic%2Fdc%2Fd2%2Fe3%2Fdcd2e350f4fcae5d336b04756417c6dd.jpg&refer=http%3A%2F%2Fup.enterdesk.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1637075978&t=626d0dc080f55bcb393ba8bfaddcc54d" /></div>
+              <div class="cntl-icon cntl-center">2021</div>
+            </div>
+
+
+            <div class="cntl-state cntl-animate">
+              <div class="cntl-content">
+                <h4>11月</h4>
+                <p>
+                  成功与达因药业维生素AD销量破7亿品牌“伊可新”达成内容战略合作。
+                </p>
+
+                <h4>10月</h4>
+                <p>
+                  与天猫果酒类目第一“贝瑞甜心MISS BERRY”品牌达成内容种草战略合作。
+                </p>
+
+                <h4>9月</h4>
+                <p>
+                  成功与西班牙王室口服胶原蛋白“BECHI”品牌达成内容种草战略合作。
+                </p>
+
+                <h4>8月</h4>
+                <p>成功与天猫头部咖啡杯品牌“HOLOHOLO”达成内容种草战略合作。</p>
+
+                <h4>7月</h4>
+                <p>
+                  成功与麦卢卡蜂蜜类目第一品牌“瑞琪奥兰”达成内容种草战略合作。
+                </p>
+
+                <h4>5月</h4>
+                <p>成功与“NG时尚”旗下品牌“HSZ”面膜达成内容种草战略合作。</p>
+
+                <h4>2月</h4>
+                <p>成功与“海昌”达成内容种草战略合作</p>
+              </div>
+            
+              <div class="cntl-image">
+                  <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fqqpublic.qpic.cn%2Fqq_public%2F0%2F0-2673451421-BBE665B3A173CD13700E44B34AF81862%2F0%3Ffmt%3Djpg%26size%3D25%26h%3D434%26w%3D652%26ppv%3D1.jpg&refer=http%3A%2F%2Fqqpublic.qpic.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1637076255&t=3359593f2a8e6060a1f09626995f4c77" />
+              </div>
+              <div class="cntl-icon cntl-center">2020</div>
+            </div>
+
+            <div class="cntl-state cntl-animate">
+              <div class="cntl-content">
+                <h4>11月</h4>
+                <p>
+                  与“京东”达成战略合作。（助力“京东瑞表神券日”策划播放量达到400W）
+                </p>
+
+                <h4>6月</h4>
+                <p>成功与“花花卷卷”（日系高端甜点）品牌达成内容种草战略合作。</p>
+              </div>
+
+              <div class="cntl-image"><img src="https://img0.baidu.com/it/u=4039044489,1005259994&fm=26&fmt=auto" /></div>
+              <div class="cntl-icon cntl-center">2019</div>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="footer-box" id="contactUs">
+     <div class="footer-box" id="contactUs">
       <div class="container">
         <div class="footer-wrap">
           <div class="contact-box">
@@ -179,33 +294,12 @@
               <span class="line"></span>
             </div>
             <div class="contact-info">
-              <p class="tel">13822107004</p>
-              <p class="email">sales@hlhlive.com</p>
-              <p class="address">广州市越秀区解放南路39号万菱广场11楼</p>
+              <p class="tel">13155556666</p>
+              <p class="email">aaaabbb@ccc.com</p>
+              <p class="address">西湖区XXXXXXXXXXXXXX</p>
             </div>
           </div>
-          <div class="qrcode-box">
-            <ul class="qrcode-list">
-              <li class="qrcode-item">
-                <img
-                  alt="图片"
-                  border="0"
-                  src="upfiles/202107/16/adc9725184ecedf91.png"
-                  style="width: auto; max-width: 100%"
-                />
-                <p class="desc">官方微信</p>
-              </li>
-              <li class="qrcode-item">
-                <img
-                  alt="图片"
-                  border="0"
-                  src="upfiles/202107/16/a1a1f9d1e778bcf51.png"
-                  style="width: auto; max-width: 100%"
-                />
-                <p class="desc">官方公众号</p>
-              </li>
-            </ul>
-          </div>
+    
         </div>
       </div>
     </div>

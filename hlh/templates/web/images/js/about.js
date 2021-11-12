@@ -2,8 +2,9 @@ $(function(){
 
   new Swiper(".service-swiper .swiper-container",{
     effect:'coverflow',
+    // autoplay: true,
     loop:true,
-    slidesPerView:3.5,
+    slidesPerView:2.5,
     centeredSlides:true,
     coverflowEffect:{
       rotate:0,
@@ -20,7 +21,7 @@ $(function(){
 
 
 
-  $(".menu-box .menu-link").click(function(){
+  $(".main-nav .menu-link").click(function(){
     $("html,body").animate({
       scrollTop:$($(this).attr("href")).offset().top-75 + "px"
     },500)
@@ -54,4 +55,13 @@ $(function(){
       ]
     }
   })
+
+    $(".cntl").cntl({
+      revealbefore: 300,
+      anim_class: "cntl-animate",
+      onreveal: function (e) {
+        console.log(e);
+      },
+    });
+  
 })
